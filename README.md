@@ -1,6 +1,6 @@
 # Synchronizing Task Behavior: Aligning Multiple Tasks during Test-Time Training [ICCV 2025]
 
-**Official PyTorch implementation of [*Synchronizing Task Behavior: Aligning Multiple Tasks during Test-Time Training*] [ICCV 2025].**
+**Official PyTorch implementation of [*Synchronizing Task Behavior: Aligning Multiple Tasks during Test-Time Training*](https://arxiv.org/abs/2507.07778) [ICCV 2025].**
 
 **Wooseong Jeong\***, **Jegyeong Cho\***, **Youngho Yoon\***, and **Kuk-Jin Yoon**  
 *Visual Intelligence Lab., KAIST, Korea*  
