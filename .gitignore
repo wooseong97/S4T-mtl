@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+
+# checkpoints / pretrained weights
+pretrained_models/
+*.pth
+*.pth.tar
+
+# experiment outputs
+exp_*/
+tb_dir/
+vis_img/
+*.log

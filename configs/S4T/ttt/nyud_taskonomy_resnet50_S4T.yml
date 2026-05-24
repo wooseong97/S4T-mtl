@@ -1,0 +1,66 @@
+# Setup
+version_name: nyud_taskonomy_resnet50_S4T
+out_dir: "../exp_S4T_final/exp_resnet/exp_S4T_ttt/"
+
+# Database [NYUD, PASCALContext, Taskonomy]
+train_db_name: Taskonomy
+val_db_name: Taskonomy
+val_seg: NYUD
+trBatch: 8
+valBatch: 8
+nworkers: 4
+ignore_index: 255
+
+# Optimizer and scheduler
+val_interval: 1
+save_interval: 20000
+epochs: 999999
+max_iter: 40000
+optimizer: sgd
+optimizer_kwargs:
+   lr: 0.00002
+   weight_decay: 0.000001
+scheduler: poly
+
+steps: 40
+online: True
+episodic: True
+
+# Model
+model: CNN_MTL_S4T
+backbone: resnet50
+head: mlp
+
+head_inter_channel: 64
+S4T_decoder: Joint_MAE_v4
+S4T_model_spec:
+   backbone: vitT
+   encoder_depth: 4
+   encoder_embed: 64
+   encoder_num_heads: 4
+   decoder_depth: 2
+   decoder_embed: 64
+   decoder_num_heads: 4
+   TTT_input_res: 256
+   mask_ratio: 0.8
+# pre_result, TTT_result
+test_result: pre_result
+TTT_loss: TTT_L1
+
+# Tasks
+TASKS:
+   NAMES:
+      - depth_zbuffer
+      - edge_occlusion
+      - normal
+      - segment_semantic
+
+# Loss kwargs
+loss_kwargs:
+   loss_weights:
+       TTT_loss: 0.01
+       
+momentum:
+   base: 0.1
+
+pretrained_ckpt: "../exp_S4T_final/exp_resnet/exp_S4T_pretrain/nyud_taskonomy_resnet50_S4T/checkpoint_60000.pth.tar"

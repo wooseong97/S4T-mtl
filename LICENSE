@@ -1,0 +1,22 @@
+Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)
+
+Copyright (c) 2025 Wooseong Jeong and the authors of
+"Synchronizing Task Behavior: Aligning Multiple Tasks during Test-Time Training".
+
+Portions of this codebase are derived from prior multi-task learning code
+(MTI-Net / Multi-Task-Learning-PyTorch by Simon Vandenhende), which is also
+released under the CC BY-NC 4.0 license.
+
+This work is licensed under the Creative Commons Attribution-NonCommercial 4.0
+International License. You are free to share and adapt the material under the
+following terms:
+
+  - Attribution — You must give appropriate credit, provide a link to the
+    license, and indicate if changes were made.
+  - NonCommercial — You may not use the material for commercial purposes.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
+
+Full license text:
+  Human-readable summary: https://creativecommons.org/licenses/by-nc/4.0/
+  Legal code:             https://creativecommons.org/licenses/by-nc/4.0/legalcode
